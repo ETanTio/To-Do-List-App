@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Todo List App with Task Counters</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="sidebar-content">
+        <div class="add-task">
+          <h2>Add New Task</h2>
+          <input type="text" id="newTaskInput" placeholder="Enter task title" />
+          <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <hr />
+
+        <h2>Status Selector</h2>
+        <p id="selectedTaskDisplay">No task selected</p>
+        <button onclick="updateSelectedTaskStatus('ToDo')">Set To Do</button>
+        <button onclick="updateSelectedTaskStatus('InProgress')">Set In Progress</button>
+        <button onclick="updateSelectedTaskStatus('Done')">Set Done</button>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <h1 style="text-align: center; margin-bottom: 38px;">To‑Do List App</h1>
+      
+    <div id="taskCounters" class="counter-container">
+      <div class="counter todo-counter">
+        <span class="label">To Do:</span>
+        <span class="number" id="todoCount">0</span>
+      </div>
+      <div class="counter inprogress-counter">
+        <span class="label">In Progress:</span>
+        <span class="number" id="inprogressCount">0</span>
+      </div>
+      <div class="counter done-counter">
+        <span class="label">Done:</span>
+        <span class="number" id="doneCount">0</span>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column" id="todo">
+        <h2>To Do</h2>
+      </div>
+      <div class="column" id="inprogress">
+        <h2>In Progress</h2>
+      </div>
+      <div class="column" id="done">
+        <h2>Done</h2>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
